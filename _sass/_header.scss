@@ -10,8 +10,12 @@
   background-image: none;
 }
 
-.site-header .site-title {
-  font-size: $h2;
+.site-header .measure {
+    border-bottom: 3px solid $nav-color;
+}
+
+.site-header a.site-title {
+  font-size: $h1;
 }
 
 .site-nav {

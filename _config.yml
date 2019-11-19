@@ -1,20 +1,20 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
+title:       m@
+email:       m@attwilson.com
+author:      Matt Wilson
 description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "https://m.attwilson.com"
 date_format: "%b %-d, %Y"
 header_pages:
- - about.md
- - contact.html
+  - about.md
+# - contact.html
 
 # Google services
 google_verification:
 # Use either direct GA implementation or set up GTM account
 # - using both will skew your data (leave blank to not use at all)
-google_analytics:
+google_analytics: UA-152909803-1
 google_tag_manager:
 # Bing services
 bing_verification:
@@ -23,7 +23,7 @@ bing_verification:
 animated:             false
 show_related_posts:   false
 show_post_footers:    false
-show_social_icons:    false
+show_social_icons:    true
 ajaxify_contact_form: false
 enable_mathjax: false
 extended_fonts: false
@@ -47,15 +47,15 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-github_username:
+github_username: ironslob
 reddit_username:
 bitbucket_username:
 stackoverflow_id:
-twitter_username:
+twitter_username: codebrewery
 skype_username:
 steam_nickname:
 google_plus_id:
-linkedin_username:
+linkedin_username: m-attwilson
 angellist_username:
 medium_id:
 bitcoin_url:
@@ -68,9 +68,9 @@ vk_id:
 show_sharing_icons: false
 # Change to 'true' to enable individual icons
 share_facebook: false
-share_twitter: false
+share_twitter: true
 share_googleplus: false
-share_linkedin: false
+share_linkedin: true
 share_digg: false
 share_tumblr: false
 share_reddit: false
@@ -108,7 +108,7 @@ text:
       sent:     'Message sent!'
       error:    'Error!'
   thanks: 'Thanks for contacting us. We will reply as soon as possible.'
-  og_locale: 'en_US'
+  og_locale: 'en_GB'
 
 # Build settings
 markdown:     kramdown

@@ -20,9 +20,15 @@
     font-size: $h4;
   }
 
+  .site-header .site-titles {
+      float: left;
+  }
+
+  .site-header .site-subtitle {
+  }
+
   .site-header .site-title {
     font-size: $h3;
-    float: left;
   }
 
   .site-header .site-nav {

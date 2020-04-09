@@ -212,3 +212,13 @@ I hope this post has been educational, though I've really only gotten started on
 - What's with all the coffee?
 
 I'll answer all of these and hopefully provide some useful suggestions for your API.
+
+# UPDATE 09/04/2020
+
+I've had several people raise the question about whether to use vendor specific MIME types instead of the pre-defined ones, such as `application/json`. For examples:
+
+- `application/vnd.mattwilson+json`
+- `application/vnd.mattwilson.20200401.json`
+- `application/vnd.mattwilson.json; version=20200401`
+
+I suspect the answer here lies in the context of the API that you're implementing, and the intracacies of the clients. Whichever works best for you!

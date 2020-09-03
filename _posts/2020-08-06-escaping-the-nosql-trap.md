@@ -37,7 +37,7 @@ concept with a well engineered and architected approach which will allow the
 company to grow and scale along its hockey stick trajectory as we're all led to
 believe every startup does.
 
-Ask any startup CTO and they'll all tech you the same thing. Plans change as
+Ask any startup CTO and they'll all tell you the same thing. Plans change as
 you begin to find your place in the market, new features are needed, and that
 initial proof of concept grows, is built upon, and there isn't time or resource
 to do things properly anymore.

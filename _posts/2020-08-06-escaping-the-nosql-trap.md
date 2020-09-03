@@ -32,22 +32,23 @@ naive.
 
 Many tech startups begin in the same way, a hastily hacked together proof of
 concept which is intended as a short term solution to prove that a problem
-exists and can be solved. The intention is always to replace this proof of
-concept with a well engineered and architected approach which will allow the
-company to grow and scale along its hockey stick trajectory as we're all led to
-believe every startup does.
+exists and can be solved. We promise ourselves that we'll replace this proof of
+concept with a well engineered and architected approach. The re-imagined
+solution will be clean and free from all the hacks, and will help the company
+to grow along its hockey stick trajectory as we're all led to believe
+every startup does.
 
-Ask any startup CTO and they'll all tell you the same thing. Plans change as
-you begin to find your place in the market, new features are needed, and that
-initial proof of concept grows, is built upon, and there isn't time or resource
-to do things properly anymore.
+Ask any startup CTO and they'll all tell you the same thing. Plans change.
+You begin to find your place in the market. new features are needed, and that
+initial proof of concept grows. It becomes your platform, and there isn't time
+or resource to do things properly anymore.
 
 This isn't always a bad thing. With a good team of engineers you can gradually
 re-engineer your approach as you improve areas of functionality, add
 appropriate testing, automate deployments, etc. You move towards a system which
 is no longer proof of concept, and production ready. Sometimes that isn't
 possible and you take the [strangler approach](https://martinfowler.com/bliki/StranglerFigApplication.html) which
-takes longer, but in theory you have the same result.
+can take longer, but gets you there in the end.
 
 ### What does this have to do with NoSQL?
 
@@ -96,12 +97,8 @@ For other things you have little choice but to move to some sort of data
 pipeline to allow you to track user events, and model their behaviour in a way
 that allows you to understand how they use your platform, and where they aren't
 engaging in a way you'd like. This is costly as you'll need a team of people to
-build this, you'll need new skills, and it's an entire product and team in
-itself. When the business reaches a certain scale you're likely to want a
-"real" data pipeline to allow a separate team to run their analytics
-autonomously, and experiments without reliance on product changes, but it's a
-significant cost and your choices are few. Not an ideal situation to be in -
-particularly one that's avoidable.
+build this, you'll need new skills, and it's an entire product in itself.
+Resources you could spend elsewhere.
 
 Whichever method you choose you cannot regain what you've lost - data about how
 your customers have been performing before now. You might be able to normalise
@@ -185,6 +182,12 @@ article!
 Set yourself up for success. You owe it to the company you're building to have
 a little maturity in your tech, and save yourself a lot of headaches in the
 future. Adopt data early, and use it to grow even faster!
+
+I hope your business reaches a scale where you need a real data pipeline, and a
+team dedicated to it. A team which can operate autonomously, and run
+experiments without months of product development. I also hope that you choose
+to go down that path when you need it, and that you don't have it forced upon
+you due to technical myopia.
 
 ### Footnote
 

@@ -16,17 +16,17 @@ complemented each other so well.
 
 As with most things somebody took it too far when they realised that the
 document store could be used as their primary database, and the concept of
-"NoSQL" was born[^0] with the introduction of technology such as MongoDB.
+"NoSQL" was born[^1] with the introduction of technology such as MongoDB.
 
-Akin to the fad of recent years focused around "no code"[^0] the drive to
+Akin to the fad of recent years focused around "no code"[^2] the drive to
 produce products without the use of code is an interesting one, if not somewhat
 naive.
 
-[^0]: I have nothing to back this claim up, this is just how it seemed to happen to me.
+[^1]: I have nothing to back this claim up, this is just how it seemed to happen to me.
 
-[^0]: Which almost certainly follows on from the concept of NoSQL[^0].
+[^2]: Which almost certainly follows on from the concept of NoSQL[^3].
 
-[^0]: Likewise.
+[^3]: Likewise.
 
 ### Who are you calling naive?
 
@@ -58,14 +58,14 @@ market. You need to iterate quickly.
 Traditional relational databases require prior knowledge about the structure of
 the data that you're going to store. When that structure changes you may have
 difficulty adapting your platform to use the new structure, or it might take a
-lot of time to make the changes[^0].
+lot of time to make the changes[^4].
 
 A relational database has a rigid structure, has relationships, and all of that
 needs to be modified when the product changes.
 
 Enter NoSQL. No structure. No changes. No problem?
 
-[^0]: A future blog post will cover the idea of "functional abstraction", a term coined by a colleague to describe a code style adopted at the time which allowed for rapid iteration and re-factoring as you go to resolve issues.  Ideal for startups.
+[^4]: A future blog post will cover the idea of "functional abstraction", a term coined by a colleague to describe a code style adopted at the time which allowed for rapid iteration and re-factoring as you go to resolve issues.  Ideal for startups.
 
 ### Data, data, data!
 

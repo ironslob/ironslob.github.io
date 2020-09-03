@@ -7,16 +7,15 @@ categories: databases tech nosql
 ---
 
 I was first introduced to NoSQL when Solr was thrust upon me as a searchable
-document store. It was a fantastic solution to a scaling problem we had seen,
-and allowed us to offload a lot of our document searching from our relational
-database to another service. What a fantastic combination of tooling which
+document store. It was a fantastic solution to a scaling problem we had.
+It allowed us to offload most of our document searching from our relational
+database to another service. It was a fantastic combination of tooling which
 complemented each other so well.
 
 ### We want tech, without the tech
 
-As with most things somebody took it too far when they realised that the
-document store could be used as their primary database, and the concept of
-"NoSQL" was born[^1] with the introduction of technology such as MongoDB.
+As with most things, somebody took it too far. They realised that the
+document store could be used as their primary database. "NoSQL" was born[^1].
 
 Akin to the fad of recent years focused around "no code"[^2] the drive to
 produce products without the use of code is an interesting one, if not somewhat
@@ -30,20 +29,14 @@ naive.
 
 ### Who are you calling naive?
 
-Many tech startups begin in the same way, a hastily hacked together proof of
-concept which is intended as a short term solution to prove that a problem
-exists and can be solved. We promise ourselves that we'll replace this proof of
-concept with a well engineered and architected approach. The re-imagined
-solution will be clean and free from all the hacks, and will help the company
-to grow along its hockey stick trajectory as we're all led to believe
-every startup does.
+Many tech startups begin in the same way. A rapidly hacked together proof of concept intended as a short term solution to prove an idea.  We promise ourselves that we'll replace it with a well engineered and architected approach. The re-imagined solution will be clean and free from the hacks. It will help the company to grow along its hockey stick trajectory as we're all led to believe every startup does.
 
 Ask any startup CTO and they'll all tell you the same thing. Plans change.
 You begin to find your place in the market. new features are needed, and that
 initial proof of concept grows. It becomes your platform, and there isn't time
 or resource to do things properly anymore.
 
-This isn't always a bad thing. With a good team of engineers you can gradually
+This isn't always a bad thing. A good team of engineers will gradually
 re-engineer your approach as you improve areas of functionality, add
 appropriate testing, automate deployments, etc. You move towards a system which
 is no longer proof of concept, and production ready. Sometimes that isn't
@@ -123,7 +116,7 @@ store makes sense. It offers rapid retrieval of dependant data with a single
 retrieval, rather than many. This is where NoSQL really comes into its own. By
 re-engineering your platform to offload some of your data retrieval onto the
 NoSQL document store you can increase the horizontal scalability of your
-platform massively.
+platform considerably.
 
 ### Avoiding the trap
 

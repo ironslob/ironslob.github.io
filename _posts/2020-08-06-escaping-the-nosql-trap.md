@@ -111,7 +111,7 @@ front of mind when diving into a NoSQL solution.
 
 ### So when should I use NoSQL?
 
-Historically relational databases are exceptional at what they do, all the way
+Historically, relational databases are exceptional at what they do, all the way
 up to the point where they hit a scaling limit. Whether it's I/O, memory, CPU,
 or something else, the cost of scaling further becomes increasingly expensive.
 Sharding, replicas, clustering - whatever your database offers, the complexity
@@ -137,6 +137,54 @@ reach a stage where they need to perform analytics of the data they have in
 their platform to assist in growth, and those that use a NoSQL database as
 their primary datastore will hit problems at this point, and spend significant
 funds trying to resolve this hole in their platform.
+
+I have yet to see a company that started with a NoSQL database as their primary
+datastore not hit painful problems when it comes to all of the things that I've
+discussed in this article. There are always countless reasons why it was the
+right decision, even in the face of the facts. It's expensive, it's hard to
+"fix", and it forces you to grow before you're ready, or in a way that is not
+top priority.
+
+Common reasons I've heard.
+
+#### We needed to move fast!
+
+Structure does not slow you down, if done properly. Use an appropriate database
+migration tool, and don't be afraid to make changes that need to be made.
+
+#### Relational databases are too slow!
+
+If you have found one of the few non-contrived examples where a NoSQL database
+outperforms a PostgreSQL database, hats off to you. I'm sure there are some.
+
+Appropriate use of indexes and appropriate field types is all you need. Don't
+be afraid to break the rules around normalisation either, engineers may be
+idealists, but the best solutions rarely are.
+
+#### Nobody knows SQL
+
+This is a tough one. ORMs can help you here, as can any one of the million
+relational frameworks available for your language of choice.
+
+My advice here would be - learn SQL. Understanding the data you're processing
+and how to query it effectively will be invaluable down the line.
+
+#### We have *no idea* what [specific] data is going to look like!
+
+PostgreSQL never fails to impress me, and it has a wonderful
+ [datatype for exactly this purpose](https://www.postgresql.org/docs/9.4/datatype-json.html).
+It can be queried, it can be indexed, and PostgreSQL is *FAST*.
+
+#### We want to use the newest technology!
+
+Boring technology always trumps the cool kid on the block. This will be my next
+article!
+
+### Summary
+
+Set yourself up for success. You owe it to the company you're building to have
+a little maturity in your tech, and save yourself a lot of headaches in the
+future. Adopt data early, and use it to grow even faster!
 
 ### Footnote
 

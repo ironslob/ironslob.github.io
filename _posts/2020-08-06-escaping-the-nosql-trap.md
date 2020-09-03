@@ -47,7 +47,7 @@ This isn't always a bad thing. With a good team of engineers you can gradually
 re-engineer your approach as you improve areas of functionality, add
 appropriate testing, automate deployments, etc. You move towards a system which
 is no longer proof of concept, and production ready. Sometimes that isn't
-possible and you take the <strangler approach|https://martinfowler.com/bliki/StranglerFigApplication.html> which
+possible and you take the [strangler approach](https://martinfowler.com/bliki/StranglerFigApplication.html) which
 takes longer, but in theory you have the same result.
 
 ### What does this have to do with NoSQL?
@@ -144,4 +144,4 @@ funds trying to resolve this hole in their platform.
 
 ### Footnote
 
-I'm late to the party - https://www.enterprisedb.com/blog/those-who-forget-past-are-doomed-repeat-it
+[I'm late to the party](https://www.enterprisedb.com/blog/those-who-forget-past-are-doomed-repeat-it)

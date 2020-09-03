@@ -22,8 +22,7 @@ Akin to the fad of recent years focused around "no code"[^0] the drive to
 produce products without the use of code is an interesting one, if not somewhat
 naive.
 
-[^0]: I have nothing to back this claim up, this is just how it seemed to
-happen to me.
+[^0]: I have nothing to back this claim up, this is just how it seemed to happen to me.
 
 [^0]: Which almost certainly follows on from the concept of NoSQL[^0].
 
@@ -66,10 +65,7 @@ needs to be modified when the product changes.
 
 Enter NoSQL. No structure. No changes. No problem?
 
-[^0]: A future blog post will cover the idea of "functional abstraction", a
-term coined by a colleague to describe a code style adopted at the time which
-allowed for rapid iteration and re-factoring as you go to resolve issues.
-Ideal for startups.
+[^0]: A future blog post will cover the idea of "functional abstraction", a term coined by a colleague to describe a code style adopted at the time which allowed for rapid iteration and re-factoring as you go to resolve issues.  Ideal for startups.
 
 ### Data, data, data!
 

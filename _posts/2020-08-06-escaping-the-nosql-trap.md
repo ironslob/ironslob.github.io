@@ -2,7 +2,7 @@
 layout:     post
 title:      Escaping the NoSQL trap
 date:       2020-08-06 19:07:00
-summary:    NoSQL is a wonderful tool, but use it responsibly
+summary:    NoSQL is a wonderful tool, but use it appropriately and responsibly.
 categories: databases tech nosql
 ---
 

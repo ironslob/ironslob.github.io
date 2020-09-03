@@ -18,14 +18,16 @@ As with most things somebody took it too far when they realised that the
 document store could be used as their primary database, and the concept of
 "NoSQL" was born[^0] with the introduction of technology such as MongoDB.
 
-Akin to the fad of recent years focused around "no code"[^1] the drive to
+Akin to the fad of recent years focused around "no code"[^0] the drive to
 produce products without the use of code is an interesting one, if not somewhat
 naive.
 
 [^0]: I have nothing to back this claim up, this is just how it seemed to
 happen to me.
-[^1]: Which almost certainly follows on from the concept of NoSQL[^2].
-[^2]: Likewise.
+
+[^0]: Which almost certainly follows on from the concept of NoSQL[^0].
+
+[^0]: Likewise.
 
 ### Who are you calling naive?
 
@@ -45,8 +47,7 @@ This isn't always a bad thing. With a good team of engineers you can gradually
 re-engineer your approach as you improve areas of functionality, add
 appropriate testing, automate deployments, etc. You move towards a system which
 is no longer proof of concept, and production ready. Sometimes that isn't
-possible and you take the <strangler
-approach|https://martinfowler.com/bliki/StranglerFigApplication.html> which
+possible and you take the <strangler approach|https://martinfowler.com/bliki/StranglerFigApplication.html> which
 takes longer, but in theory you have the same result.
 
 ### What does this have to do with NoSQL?
@@ -58,14 +59,14 @@ market. You need to iterate quickly.
 Traditional relational databases require prior knowledge about the structure of
 the data that you're going to store. When that structure changes you may have
 difficulty adapting your platform to use the new structure, or it might take a
-lot of time to make the changes[^3].
+lot of time to make the changes[^0].
 
 A relational database has a rigid structure, has relationships, and all of that
 needs to be modified when the product changes.
 
 Enter NoSQL. No structure. No changes. No problem?
 
-[^3]: A future blog post will cover the idea of "functional abstraction", a
+[^0]: A future blog post will cover the idea of "functional abstraction", a
 term coined by a colleague to describe a code style adopted at the time which
 allowed for rapid iteration and re-factoring as you go to resolve issues.
 Ideal for startups.
@@ -143,4 +144,4 @@ funds trying to resolve this hole in their platform.
 
 ### Footnote
 
-<I'm late to the party|https://www.enterprisedb.com/blog/those-who-forget-past-are-doomed-repeat-it>.
+I'm late to the party - https://www.enterprisedb.com/blog/those-who-forget-past-are-doomed-repeat-it

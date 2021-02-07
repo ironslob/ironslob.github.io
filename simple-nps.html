@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Escaping the NoSQL trap &#8211; m@</title>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="NoSQL is a wonderful tool, but use it appropriately and responsibly.">
+    <meta name="robots" content="all">
+    <meta name="author" content="Matt Wilson">
+    
+    <meta name="keywords" content="databases, tech, nosql">
+    <link rel="canonical" href="https://m.attwilson.com/databases/tech/nosql/2020/08/06/escaping-the-nosql-trap/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for m@" href="/feed.xml" />
+
+    <script src="https://onva-static-bleeding.s3.eu-west-2.amazonaws.com/onva-nps.js" data-survey-uuid="654cfb47-6e01-4da4-adde-66d06330f1dc"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?202102071421" type="text/css">
+
+    <!-- Fonts -->
+    
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- MathJax -->
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Escaping the NoSQL trap">
+    <meta property="og:description" content="I'm a startup addict with a zest for a tech. I love to solve problems, build teams, and new platforms.">
+    <meta property="og:url" content="https://m.attwilson.com/databases/tech/nosql/2020/08/06/escaping-the-nosql-trap/">
+    <meta property="og:site_name" content="m@">
+    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@codebrewery" />
+        <meta name="twitter:creator" content="@codebrewery" />
+    
+    <meta name="twitter:title" content="Escaping the NoSQL trap" />
+    <meta name="twitter:description" content="NoSQL is a wonderful tool, but use it appropriately and responsibly." />
+    <meta name="twitter:url" content="https://m.attwilson.com/databases/tech/nosql/2020/08/06/escaping-the-nosql-trap/" />
+    
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    
+    <script type="text/javascript">
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+       ga('create', 'UA-152909803-1', 'auto');
+       ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body class="site">
+  
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <div class="site-titles">
+        <a href="/" class="site-title">m@</a>
+        <small class="site-subtitle">Startup addict with a zest for tech</small>
+      </div>
+      <nav class="site-nav">
+        
+
+
+
+    
+    
+    
+    
+        <a class="nav-link" href="/about/">Who?</a>
+    
+
+    
+
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/ironslob"></a>
+    
+    
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+    
+      <a class="fa fa-twitter" href="https://twitter.com/codebrewery"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:m@attwilson.com"></a>
+    
+    <!--
+    <a class="fa fa-file" href="#" alt="My CV"></a>
+    -->
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/m-attwilson"></a>
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Escaping the NoSQL trap</h1>
+  <span class="post-meta">Aug 6, 2020</span><br>
+  
+  <span class="post-meta small">
+  
+    8 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>I was first introduced to NoSQL when Solr was thrust upon me as a searchable
+document store. It was a fantastic solution to a scaling problem we had.
+It allowed us to offload most of our document searching from our relational
+database to another service. It was a fantastic combination of tooling which
+complemented each other so well.</p>
+
+<h3 id="we-want-tech-without-the-tech">We want tech, without the tech</h3>
+
+<p>As with most things, somebody took it too far. They realised that the
+document store could be used as their primary database. “NoSQL” was born<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+
+<p>Akin to the fad of recent years focused around “no code”<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup> the drive to
+produce products without the use of code is an interesting one, if not somewhat
+naive.</p>
+
+<h3 id="who-are-you-calling-naive">Who are you calling naive?</h3>
+
+<p>Many tech startups begin in the same way. A rapidly hacked together proof of concept intended as a short term solution to prove an idea.  We promise ourselves that we’ll replace it with a well engineered and architected approach. The re-imagined solution will be clean and free from the hacks. It will help the company to grow along its hockey stick trajectory as we’re all led to believe every startup does.</p>
+
+<p>Ask any startup CTO and they’ll all tell you the same thing. Plans change.
+You begin to find your place in the market. new features are needed, and that
+initial proof of concept grows. It becomes your platform, and there isn’t time
+or resource to do things properly anymore.</p>
+
+<p>This isn’t always a bad thing. A good team of engineers will gradually
+re-engineer your approach as you improve areas of functionality, add
+appropriate testing, automate deployments, etc. You move towards a system which
+is no longer proof of concept, and production ready. Sometimes that isn’t
+possible and you take the <a href="https://martinfowler.com/bliki/StranglerFigApplication.html">strangler approach</a> which
+can take longer, but gets you there in the end.</p>
+
+<h3 id="what-does-this-have-to-do-with-nosql">What does this have to do with NoSQL?</h3>
+
+<p>Your business needs to be up and running with something quick. You don’t know
+exactly how the business is going to need to pivot to find its space in the
+market. You need to iterate quickly.</p>
+
+<p>Traditional relational databases require prior knowledge about the structure of
+the data that you’re going to store. When that structure changes you may have
+difficulty adapting your platform to use the new structure, or it might take a
+lot of time to make the changes<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">3</a></sup>.</p>
+
+<p>A relational database has a rigid structure, has relationships, and all of that
+needs to be modified when the product changes.</p>
+
+<p>Enter NoSQL. No structure. No changes. No problem?</p>
+
+<h3 id="data-data-data">Data, data, data!</h3>
+
+<p>Wait a moment, the use of data is a big thing now. We need to be able to
+extract information from the data that we gather from our users so that we can
+produce insights that can direct the business. Google Analytics can only take
+you so far before being able to understand a bit more about your users, and how
+they interact with your platform.</p>
+
+<p>Suddenly the choice for using NoSQL rather than a structured database format
+lets you down. While you were quick to get something up and running,
+more than likely it’s not possible for you to perform even the most basic
+analysis of the data you’ve gathered, or build products on the back of it.</p>
+
+<p>Some of the features that you’re likely to want are available by third party
+platforms (£££) but many of the insights won’t be. For example, tracking a
+history of changes for an entity becomes difficult, or analysing search
+patterns to find out how people look for products.</p>
+
+<h3 id="becoming-data-driven">Becoming data driven</h3>
+
+<p>As mentioned, there is always the possibility of dropping in third party tools,
+though you will end up paying good money for them at a time when the business
+perhaps can’t afford it. Sometimes they will be better, and you’ll use them
+anyway.</p>
+
+<p>For other things you have little choice but to move to some sort of data
+pipeline to allow you to track user events, and model their behaviour in a way
+that allows you to understand how they use your platform, and where they aren’t
+engaging in a way you’d like. This is costly as you’ll need a team of people to
+build this, you’ll need new skills, and it’s an entire product in itself.
+Resources you could spend elsewhere.</p>
+
+<p>Whichever method you choose you cannot regain what you’ve lost - data about how
+your customers have been performing before now. You might be able to normalise
+the data you have in NoSQL and load them into your choice of analytics tool,
+but that relies on your data being well formed and validated, which is rarely
+front of mind when diving into a NoSQL solution.</p>
+
+<h3 id="so-when-should-i-use-nosql">So when should I use NoSQL?</h3>
+
+<p>Historically, relational databases are exceptional at what they do, all the way
+up to the point where they hit a scaling limit. Whether it’s I/O, memory, CPU,
+or something else, the cost of scaling further becomes increasingly expensive.
+Sharding, replicas, clustering - whatever your database offers, the complexity
+increases exponentially.</p>
+
+<p>Most platforms will introduce some sort of caching layer to alleviate some of
+the load, and buy you some time, but this only helps up to a point.</p>
+
+<p>During this scaling process many platforms reach a point in their evolution
+where a denormalised representation of their data stored in a NoSQL document
+store makes sense. It offers rapid retrieval of dependant data with a single
+retrieval, rather than many. This is where NoSQL really comes into its own. By
+re-engineering your platform to offload some of your data retrieval onto the
+NoSQL document store you can increase the horizontal scalability of your
+platform considerably.</p>
+
+<h3 id="avoiding-the-trap">Avoiding the trap</h3>
+
+<p>Some businesses are lucky enough that they reach a stage in their growth where
+relational database scalability becomes expensive, and at that stage then
+turning to a NoSQL solution makes absolute sense. Almost all platforms <em>will</em>
+reach a stage where they need to perform analytics of the data they have in
+their platform to assist in growth, and those that use a NoSQL database as
+their primary datastore will hit problems at this point, and spend significant
+funds trying to resolve this hole in their platform.</p>
+
+<p>I have yet to see a company that started with a NoSQL database as their primary
+datastore not hit painful problems when it comes to all of the things that I’ve
+discussed in this article. There are always countless reasons why it was the
+right decision, even in the face of the facts. It’s expensive, it’s hard to
+“fix”, and it forces you to grow before you’re ready, or in a way that is not
+top priority.</p>
+
+<p>Common reasons I’ve heard.</p>
+
+<h4 id="we-needed-to-move-fast">We needed to move fast!</h4>
+
+<p>Structure does not slow you down, if done properly. Use an appropriate database
+migration tool, and don’t be afraid to make changes that need to be made.</p>
+
+<h4 id="relational-databases-are-too-slow">Relational databases are too slow!</h4>
+
+<p>If you have found one of the few non-contrived examples where a NoSQL database
+outperforms a PostgreSQL database, hats off to you. I’m sure there are some.</p>
+
+<p>Appropriate use of indexes and appropriate field types is all you need. Don’t
+be afraid to break the rules around normalisation either, engineers may be
+idealists, but the best solutions rarely are.</p>
+
+<h4 id="nobody-knows-sql">Nobody knows SQL</h4>
+
+<p>This is a tough one. ORMs can help you here, as can any one of the million
+relational frameworks available for your language of choice.</p>
+
+<p>My advice here would be - learn SQL. Understanding the data you’re processing
+and how to query it effectively will be invaluable down the line.</p>
+
+<h4 id="we-have-no-idea-what-specific-data-is-going-to-look-like">We have <em>no idea</em> what [specific] data is going to look like!</h4>
+
+<p>PostgreSQL never fails to impress me, and it has a wonderful
+ <a href="https://www.postgresql.org/docs/9.4/datatype-json.html">datatype for exactly this purpose</a>.
+It can be queried, it can be indexed, and PostgreSQL is <em>FAST</em>.</p>
+
+<h4 id="we-want-to-use-the-newest-technology">We want to use the newest technology!</h4>
+
+<p>Boring technology always trumps the cool kid on the block. This will be my next
+article!</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>Set yourself up for success. You owe it to the company you’re building to have
+a little maturity in your tech, and save yourself a lot of headaches in the
+future. Adopt data early, and use it to grow even faster!</p>
+
+<p>I hope your business reaches a scale where you need a real data pipeline, and a
+team dedicated to it. A team which can operate autonomously, and run
+experiments without months of product development. I also hope that you choose
+to go down that path when you need it, and that you don’t have it forced upon
+you due to technical myopia.</p>
+
+<h3 id="footnote">Footnote</h3>
+
+<p><a href="https://www.enterprisedb.com/blog/those-who-forget-past-are-doomed-repeat-it">I’m late to the party</a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>I have nothing to back this claim up, this is just how it seemed to happen to me. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Which almost certainly follows on from the concept of NoSQL<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">4</a></sup>. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>A future blog post will cover the idea of “functional abstraction”, a term coined by a colleague to describe a code style adopted at the time which allowed for rapid iteration and re-factoring as you go to resolve issues.  Ideal for startups. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Likewise. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+    <div class="measure">
+        <small>
+            All content &copy; 2020 Matt Wilson
+        </small>
+    </div>
+</footer>
+
+
+</body>
+</html>
